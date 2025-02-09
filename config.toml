@@ -11,7 +11,7 @@ taxonomies = [
 
 # When set to "true", a search index is built from the pages and section
 # content for `default_language`.
-build_search_index = true 
+build_search_index = true
 
 [markdown]
 # Whether to do syntax highlighting
@@ -33,14 +33,14 @@ radion_menu = [
 ]
 radion_title = "My Example Site"
 
-# Nicer codeblocks with copy to clipboard 
+# Nicer codeblocks with copy to clipboard
 codeblock = true
 
 # Enable MathJax support
 latex = true
 
-# Enable search bar 
-enable_search = true 
+# Enable search bar
+enable_search = true
 
-# Light/Dark Mode set 
+# Light/Dark Mode set
 theme = "toggle" # options: {light, dark, auto, toggle}

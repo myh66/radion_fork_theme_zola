@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-    <!-- Enable responsiveness on mobile devices-->
+    <!-- Enable responsiveness on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {% if page %} {% if page.description %}
@@ -26,12 +26,19 @@
       title="RSS"
       href="{{ get_url(path='atom.xml') | safe }}"
     />
-    {% endif %} {% block css %}
+    {% endif %}
+
+    <!-- Load Styles -->
     <link
       rel="stylesheet"
       href="{{ get_url(path='site.css', trailing_slash=false) | safe }}"
     />
-    {% endblock css %} {% block extra_head %} {% endblock extra_head %}
+
+    <!-- Pass Theme Preference as Data Attribute -->
+    <script>
+      document.documentElement.dataset.theme =
+        "{{ config.extra.theme | default(value='toggle') }}";
+    </script>
   </head>
 
   <body class="hack dark main container">
@@ -46,11 +53,11 @@
           {% for item in config.extra.radion_menu %}
           <a
             itemprop="url"
-            class="{% if item.url | replace(from='$BASE_URL', to=config.base_url)==current_url %}active{% endif %}"
+            class="{% if item.url | replace(from='$BASE_URL', to=config.base_url) == current_url %}active{% endif %}"
             href="{{ item.url | safe | replace(from='$BASE_URL', to=config.base_url) | safe }}"
           >
-            <span itemprop="name">{{ item.name }}</span></a
-          >
+            <span itemprop="name">{{ item.name }}</span>
+          </a>
           {% endfor %}
         </div>
       </nav>
@@ -75,11 +82,7 @@
         </div>
         {% endif %} {% if config.extra.theme | default(value="toggle") ==
         "toggle" %}
-        <a
-          id="dark-mode-toggle"
-          onclick="toggleTheme(); event.preventDefault();"
-          href="#"
-        >
+        <a id="dark-mode-toggle" href="#">
           <img
             src="{{ get_url(path='icons/sun.svg') }}"
             id="sun-icon"
@@ -120,39 +123,12 @@
         </a>
         {% endif %}
       </div>
-
-      {% set theme = config.extra.theme | default(value="toggle") %}
-      <!-- Set the correct theme in the script -->
-      <script src="{{ get_url(path='js/toggle-theme.js' ) }}"></script>
-      {% if theme == "dark" %}
-      <script>
-        setTheme("dark");
-      </script>
-      {% elif theme == "light" %}
-      <script>
-        setTheme("light");
-      </script>
-      {% elif theme == "auto" %}
-      <script>
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          setTheme("dark");
-        } else {
-          setTheme("light");
-        }
-      </script>
-      {% else %}
-      <script>
-        setTheme(getSavedTheme());
-      </script>
-      {% endif %}
     </header>
     {% endif %} {% endblock header %}
 
     <main>
       {% if config.extra.radion_title %}
-      <header>
-        <h1>{{ config.extra.radion_title }}</h1>
-      </header>
+      <header><h1>{{ config.extra.radion_title }}</h1></header>
       {% endif %} {% for page in paginator.pages %} {{
       post_macros::page_in_list(page=page) }} {% endfor %}
 
