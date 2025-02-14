@@ -1,0 +1,8 @@
+/* NOTE: MathJax doesn't support line wrapping yet as of v3 and 2025-02-14.
+ This isn't necessarily the best formatting option IMO as it forces the user
+ to scroll to see the full content but it is better than before without
+ horizontal scrolling.
+ */
+mjx-container {
+  overflow-x: auto;
+}
