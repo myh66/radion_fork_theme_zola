@@ -8,6 +8,11 @@ html {
   text-rendering: geometricPrecision
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -16,7 +21,8 @@ body {
     'JetBrainsMonoNL', Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
     monospace, serif;
-  word-wrap: break-word
+  word-wrap: break-word;
+  max-width: 100vw;
 }
 
 h1,
