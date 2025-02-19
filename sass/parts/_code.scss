@@ -33,18 +33,32 @@ $language-colors: (
   "bash": (#4eaa25, "Bash"),
 );
 
+@function get-text-color($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+  $brightness: ($r * 0.299 + $g * 0.587 + $b * 0.114);
+
+  @if ($brightness > 128) {
+    @return #000000; // Use black for bright backgrounds
+  } @else {
+    @return #ffffff; // Use white for dark backgrounds
+  }
+}
 
 // Mixin for language label styles
 @mixin base-label-style($language) {
   $color-info: map-get($language-colors, $language);
   $bg-color: nth($color-info, 1);
   $label: nth($color-info, 2);
+  $text-color: get-text-color($bg-color);
 
   content: $label;
   background: $bg-color;
-  color: #ffffff; // Ensure it is visible
+  color: $text-color;
   border-radius: 0.25rem;
   font-size: 12px;
+  font-weight: bold;
   padding: 0.2rem 0.5rem;
   text-transform: uppercase;
   position: absolute;
