@@ -28,6 +28,8 @@ site demo [here](https://micahkepe.com/radion/).
 - [x] Light/Dark mode support
 - [x] Search functionality
 - [x] Table of Contents option
+- [ ] Built-in comments option (Giscus)
+- [ ] Footnote support
 
 ## Contents and Configuration Guide
 
