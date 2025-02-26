@@ -194,3 +194,40 @@ article [itemprop="summary"] p {
     margin: 15px;
   }
 }
+
+/* Footnotes */
+.footnote-reference {
+  margin-left: 4px;
+}
+
+
+.footnote-definition {
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: start;
+  align-items: start;
+  gap: 10px;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 5px 0;
+  padding-block-end: 5px;
+
+  sup {
+    color: #ff2e88;
+    font-size: inherit;
+    font-weight: bold;
+    vertical-align: baseline;
+  }
+
+  sup::before {
+    content: "["
+  }
+
+  sup::after {
+    content: "]"
+  }
+
+  p {
+    margin: 0;
+  }
+}

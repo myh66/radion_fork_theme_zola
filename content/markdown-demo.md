@@ -64,6 +64,19 @@ This is an example of an H4 header.
 | Row 2    | Row 2    | Row 2    |
 | Row 3    | Row 3    | Row 3    |
 
+with alignment:
+
+| Left-Aligned | Centered  |    Right-Algned |
+| :----------- | :-------: | --------------: |
+| foo          | fibonacci | some more stuff |
+| bar          |    42     | (idk what else) |
+
+## Footnotes
+
+Footnote example[^1]
+
+Some other footnote that is inline[^2]. As you can see, it just blends right in!
+
 ## Lists
 
 ### Unordered List
@@ -75,6 +88,8 @@ This is an example of an H4 header.
 ### Ordered List
 
 1. Item 1
+   1. Indented item
+   2. Yet another indented item
 2. Item 2
 3. Item 3
 
@@ -96,3 +111,9 @@ snippets within a paragraph.
 
 This is an [example link](https://example.com). You can add links to text by
 wrapping the text in square brackets and the URL in parentheses.
+
+---
+
+[^1]: Some footnote
+
+[^2]: https://en.wikipedia.org/wiki/Isometric_projection
