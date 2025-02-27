@@ -1,23 +1,25 @@
 # radion
 
-A sleek, modern blog theme for [Zola](https://www.getzola.org/). See the live 
+A sleek, modern blog theme for [Zola](https://www.getzola.org/). See the live
 site demo [here](https://micahkepe.com/radion/).
 
-> **radion** 
-> noun 
-> 1. (*physics*) A scalar field in higher-dimensional spacetimes
+> **radion**
+> noun
 >
+> 1. (_physics_) A scalar field in higher-dimensional spacetimes
 
 <details open>
 <summary>Dark theme</summary>
 
 ![radion dark theme screenshot](screenshot.png)
+
 </details>
 
 <details>
 <summary>Light theme</summary>
 
 ![radion light theme screenshot](screenshot-light.png)
+
 </details>
 
 ## Features
@@ -38,6 +40,7 @@ site demo [here](https://micahkepe.com/radion/).
   - [Top menu](#top-menu)
   - [Title](#title)
   - [Author](#author)
+  - [Favicon](#favicon)
   - [GitHub](#github)
   - [Code Snippets](#code-snippets)
   - [LaTex Support](#latex-support)
@@ -127,6 +130,14 @@ date = 1970-01-01
 [extra]
 author = "John Smith"
 ```
+
+### Favicon
+
+To change the default favicon, create your own favicon folder with the following
+site: [RealFaviconGenerator](https://realfavicongenerator.net/), setting the
+'Favicon path' option to `/icons/favicon/`. Unzip the created folder, then
+create a `static/icons/` directory if it does not already exist, and then place
+the unzipped `favicon/` directory in `static/icons/`.
 
 ### GitHub
 
