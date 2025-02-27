@@ -139,6 +139,14 @@ site: [RealFaviconGenerator](https://realfavicongenerator.net/), setting the
 create a `static/icons/` directory if it does not already exist, and then place
 the unzipped `favicon/` directory in `static/icons/`.
 
+By default, favicons are enabled, however, if for some reason you would like to
+disable favicons, set the following in your `config.toml`:
+
+```toml
+[extra]
+favicon = false
+```
+
 ### GitHub
 
 To enable a GitHub reference link in the header, set the following in your
