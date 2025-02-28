@@ -1,5 +1,6 @@
 name = "radion"
 description = "A sleek, modern blog theme."
+tags = ["SEO", "search", "accessible"]
 license = "MIT"
 homepage = "https://github.com/micahkepe/radion"
 min_version = "0.19.2"
