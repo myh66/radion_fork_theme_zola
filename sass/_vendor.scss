@@ -60,7 +60,7 @@ a {
   cursor: pointer;
   color: #ff2e88;
   text-decoration: none;
-  border-bottom: 1px solid #ff2e88
+  border-bottom: 1.5px solid #ff2e88
 }
 
 .light a {
@@ -68,9 +68,14 @@ a {
   font-weight: bold;
 }
 
-a:hover {
-  background-color: #ff2e88;
+.light a:hover {
+  background-color: #ce0068;
   color: #fff
+}
+
+.dark a:hover {
+  background-color: #b7005d;
+  color: #fff;
 }
 
 .grid {

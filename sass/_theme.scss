@@ -89,8 +89,13 @@ blockquote cite::before {
   padding: 20px 10px;
 }
 
-nav a.active {
-  background-color: #ff2e88;
+.light nav a.active {
+  background-color: #ce0068;
+  color: #fff;
+}
+
+.dark nav a.active {
+  background-color: #b7005d;
   color: #fff;
 }
 
