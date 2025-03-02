@@ -65,6 +65,15 @@
         {% endif %}
     </div>
 
+    <!-- Comment section -->
+    {% block comments %}
+      {% if config.extra.comments | default(value="false") %}
+        {% if page.extra.comments | default(value="true")%}
+          {% include "_giscus_script.html" %}
+        {% endif %}
+      {% endif %}
+    {% endblock comments %}
+
 
     {% block page_footer %}
         <footer>

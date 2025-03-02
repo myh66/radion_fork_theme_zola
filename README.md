@@ -31,7 +31,7 @@ site demo [here](https://micahkepe.com/radion/).
 - [x] Search functionality
 - [x] Table of Contents option
 - [x] Footnote support
-- [ ] Built-in comments option (Giscus)
+- [x] Built-in comments option (Giscus)
 
 ## Contents and Configuration Guide
 
@@ -47,6 +47,7 @@ site demo [here](https://micahkepe.com/radion/).
   - [Searchbar](#searchbar)
   - [Light and Dark Modes](#light-and-dark-modes)
   - [Table of Contents](#table-of-contents)
+  - [Comments](#comments)
 - [Acknowledgements](#acknowledgements)
 
 ## Installation
@@ -227,6 +228,39 @@ of the page:
 [extra]
 toc = true
 ```
+
+### Comments
+
+> [!NOTE]
+> Giscus comments assumes that you are hosting the blog site via GitHub Pages
+> and thus have access to GitHub Discussions.
+
+First, follow the instructions at [giscus.app](https://giscus.app/).
+This includes installing the Giscus app and enabling discussions on the
+GitHup repository that you host the website code. Additionally, fill in the
+repository path in the prompt. Then, from the generated script, fill in the
+corresponding values in the `config.toml`:
+
+```toml
+[extra]
+comments = true  # {true, false}; sets global enabling of comments by default
+giscus_repo = "FILL ME IN"
+giscus_repo_id = "FILL ME IN"
+giscus_data_category_id = "FILL ME IN"
+```
+
+Comments can be enabled or disabled on a per page basis by editing the page's
+front matter. For example, to disable comments on a specific post:
+
+```toml
+[extra]
+comments = false
+```
+
+The `config.toml` value for `comments` takes precedence and priority. For
+example, if you globally disable comments in your `config.toml` by setting
+`comments = false`, then trying to enabling comments through a page's front
+matter will have no effect.
 
 ## Acknowledgements
 
