@@ -47,3 +47,9 @@ theme = "toggle" # options: {light, dark, auto, toggle}
 
 # Whether to display favicon
 favicon = true
+
+# Giscus comment support
+comments = true
+giscus_repo = "micahkepe/radion"
+giscus_repo_id = "R_kgDONK7lCQ"
+giscus_data_category_id = "DIC_kwDONK7lCc4CnfXf"
