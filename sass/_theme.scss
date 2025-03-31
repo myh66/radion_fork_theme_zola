@@ -3,9 +3,12 @@ This file defines the custom stylesheet for the site theme independent of
 third-party plugins and libraries.
 */
 :root {
-  --screen-size-small: 30em;
   /* breakpoint reference only */
-  --search-border-color: #ff2e88
+  --screen-size-small: 30em;
+
+  /* Disable ligatures */
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
 }
 
 @keyframes intro {

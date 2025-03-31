@@ -17,10 +17,10 @@
 <article itemscope itemtype="http://schema.org/BlogPosting">
     <header>
         <h1 itemprop="headline">{{ page.title }}</h1>
-        <span class="muted">{{ post_macros::meta(page=page) }}</span>
+        <data class="muted">{{ post_macros::meta(page=page) }}</data>
     </header>
 
-    <div itemprop="articleBody">
+    <article itemprop="articleBody">
         {% if page.summary and page.summary != page.content %}
             {{ page.summary | safe }}
 
@@ -63,7 +63,7 @@
             <!-- If no summary separate from content, just render content -->
             {{ page.content | safe }}
         {% endif %}
-    </div>
+    </article>
 
     <!-- Comment section -->
     {% block comments %}
