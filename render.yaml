@@ -6,4 +6,4 @@ services:
     publishDir: public
     envVars:
       - key: ZOLA_VERSION
-        value: 0.17.2
+        value: 0.20.0
