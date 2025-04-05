@@ -1,0 +1,89 @@
+# 网站基本URL，改成你的网站地址
+base_url = "https://micahkepe.com/radion"
+
+# 是否编译 SASS/SCSS 文件
+compile_sass = true
+
+# 网站标题
+title = "radion theme"
+
+# 网站描述
+description = "A elegant light and dark theme for Zola"
+
+# 是否生成 RSS 订阅源
+generate_feeds = true
+
+# 分类系统配置
+taxonomies = [
+    # 文章分类，feed = true 表示该分类会生成 RSS 源
+    {name = "categories", feed = true},
+    # 文章标签
+    {name = "tags", feed = true},
+]
+
+# 是否构建搜索索引
+# 当设置为 "true" 时，将为默认语言的页面和章节内容构建搜索索引
+build_search_index = true
+
+[markdown]
+# 代码高亮设置
+# 是否启用代码高亮功能
+highlight_code = true
+
+# 代码高亮主题，可以设置为 Zola 支持的任何主题
+# 常用主题：one-dark, monokai, base16-ocean-dark 等
+highlight_theme = "one-dark"
+
+# 搜索功能配置
+[search]
+# 搜索索引格式
+index_format = "elasticlunr_json"
+
+# 额外设置
+[extra]
+# 网站作者
+author = "John Doe"
+
+# GitHub 仓库链接
+github = "https://github.com/micahkepe"
+
+# 导航菜单配置
+# $BASE_URL 会被自动替换为网站的基本URL
+radion_menu = [
+    {url = "$BASE_URL/", name = "Home"},         # 首页
+    {url = "$BASE_URL/categories", name = "Categories"},  # 分类页
+    {url = "$BASE_URL/tags", name = "Tags"},     # 标签页
+]
+
+# 网站首页显示的标题
+radion_title = "My Example Site"
+
+# 是否启用更好的代码块显示（包含复制到剪贴板功能）
+codeblock = true
+
+# 是否启用 LaTeX 数学公式支持（使用 MathJax）
+latex = true
+
+# 是否启用搜索栏
+enable_search = true
+
+# 主题模式设置
+# 可选值：
+# - light: 始终使用亮色主题
+# - dark: 始终使用暗色主题
+# - auto: 跟随系统设置自动切换
+# - toggle: 允许用户手动切换主题
+theme = "toggle"
+
+# 是否显示网站图标（favicon）
+favicon = true
+
+# Giscus 评论系统设置
+# 是否启用评论功能
+comments = true
+# GitHub 仓库信息，格式：用户名/仓库名
+giscus_repo = "micahkepe/radion"
+# GitHub 仓库 ID（从 giscus.app 获取）
+giscus_repo_id = "R_kgDONK7lCQ"
+# Giscus 分类 ID（从 giscus.app 获取）
+giscus_data_category_id = "DIC_kwDONK7lCc4CnfXf"
