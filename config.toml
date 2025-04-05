@@ -1,0 +1,18 @@
+# 启用主题
+theme = "radion"
+
+# 启用分页
+paginate_by = 5
+
+# 启用必要的分类
+taxonomies = [
+    {name = "categories", feed = true},
+    {name = "tags", feed = true},
+]
+
+# 其他建议的配置
+[extra]
+# 设置网站标题
+radion_title = "X1aoma的日记"
+# 设置主题模式
+theme = "toggle"
